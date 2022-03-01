@@ -19,7 +19,7 @@ for _ in range(N):
             if B[i] == j:
                 bucket_b[j] += 1
 
-
+    '''
     if bucket_a[4] != bucket_b[4]:
         if bucket_a[4] > bucket_b[4]: ans = 'A'
         else: ans = 'B'
@@ -35,4 +35,16 @@ for _ in range(N):
     else:
         ans = 'D'
 
+    print(ans)
+'''
+    ans = 'D'
+    for i in range(4, 0, -1):
+        if bucket_a[i] == bucket_b[i]:
+            continue
+        elif bucket_a[i] > bucket_b[i]:
+            ans = 'A'
+            break
+        else:
+            ans = 'B'
+            break
     print(ans)
