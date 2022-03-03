@@ -19,7 +19,7 @@ for _ in range(N):
             if B[i] == j:
                 bucket_b[j] += 1
 
-    '''
+'''
     if bucket_a[4] != bucket_b[4]:
         if bucket_a[4] > bucket_b[4]: ans = 'A'
         else: ans = 'B'
