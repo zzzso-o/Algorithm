@@ -7,6 +7,8 @@ def d(n):
         x = x + int(i)
     return n + x
 
+    # x = n +(n//10) + (n%10)
+
 # set에 넣어서 중복 제거하는 방법으로 셀프넘버 찾기
 result = set()
 for i in range(1, 10001):
@@ -15,5 +17,3 @@ numbers = set(range(1, 10000))
 ans = numbers - result
 for k in sorted(ans):
     print(k)
-
-
