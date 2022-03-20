@@ -1,15 +1,13 @@
-def hansu(x):
-    cnt = 0
-    if x < 100:
-        for i in range(1, x+1):
-            cnt += i
-        return cnt
-    elif x >= 100:
-        cnt = 99
-        for i in range(100, x+1):
-            if (i//100)-((i%100)//10) == ((i%100)//10)-((i%100)%10):
-                cnt += 1
-        return cnt
-
 N = int(input())
-print(hansu(N))
+cnt = 0
+
+for i in range(1, N+1):
+    if i <= 99:
+        cnt += 1
+
+    else:
+        nums = list(map(int, str(i)))
+        if nums[0] - nums[1] == nums[1] - nums[2]:
+            cnt += 1
+
+print(cnt)
