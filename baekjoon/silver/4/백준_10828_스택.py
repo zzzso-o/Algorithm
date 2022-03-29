@@ -1,3 +1,5 @@
+import sys
+
 N = int(input())
 i = 0
 dishes = []
@@ -21,7 +23,7 @@ def im_stack(command):
             return dishes[-1]
 
 while i < N:
-    commands = list(map(str, input().split()))
+    commands = list(map(str, sys.stdin.readline().split()))
     if commands[0] == 'push':
         dishes.append(commands[1])
     else:
