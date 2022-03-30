@@ -11,4 +11,3 @@ while True:
     else:
         que_cards.popleft()
         que_cards.append(que_cards.popleft())
-
