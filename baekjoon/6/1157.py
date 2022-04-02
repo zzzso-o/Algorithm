@@ -1,22 +1,12 @@
-import sys
-input = sys.stdin.readline
+word = input().upper()
+unique_words = list(set(word))
 
-word = input()
 bucket = []
-for i in word:
-    cnt = 0
-    for j in range(len(word)):
-        if i == word[j] or i == word[j].upper():
-            cnt += 1
-    bucket.append(cnt)
+for i in unique_words:
+    bucket.append(word.count(i))
 
-count = 0
-for k in range(len(bucket)):
-    if bucket[k] == max(bucket):
-        count += 1
-        if count >= 2:
-            print('?')
-            break
-        else:
-            print(word[k].upper())
-            break
+if bucket.count(max(bucket)) > 1:
+    print('?')
+else:
+    max_index = bucket.index(max(bucket))
+    print(unique_words[max_index])
