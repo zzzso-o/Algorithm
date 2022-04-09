@@ -1,9 +1,7 @@
 N = int(input())
-i = 0
-while True:
-    a = i*6 +1
-    b = a+1
-    if N <= 1:
-        print(1)
-        break
-    elif
+cnt = 1
+bee_house = 1
+while N > bee_house:
+    bee_house += cnt*6
+    cnt +=1
+print(cnt)
