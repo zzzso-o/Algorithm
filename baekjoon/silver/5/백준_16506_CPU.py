@@ -1,0 +1,4 @@
+# 55
+
+[ADD, SUB, MOV, AND, OR, NOT, MULT, LSFTL, LSFTR, ASFTR, RL, RR]
+[0000, ]
