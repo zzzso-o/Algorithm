@@ -18,4 +18,3 @@ for i in range(N):
     elif find_primenumber(numbers[i]) == True:
         sosu.append(numbers[i])
 print(len(sosu))
-
