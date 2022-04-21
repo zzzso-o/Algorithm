@@ -22,4 +22,5 @@ for _ in range(N):
     for i in opcodes:
         if code[0] == i:
             result.append(opcodes[i])
-        if code[1] ==
+        if code[1] + 'c' == i:
+            result.append(opcodes[i]+0)
