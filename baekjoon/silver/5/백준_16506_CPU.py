@@ -18,9 +18,27 @@ opcodes = {
 N = int(input())
 for _ in range(N):
     code = list(map(str, input().split()))
-    result = []
-    for i in opcodes:
-        if code[0] == i:
-            result.append(opcodes[i])
-        if code[1] + 'c' == i:
-            result.append(opcodes[i]+0)
+    result = [0] * 16
+
+    # 0~4
+    for key in opcodes.keys():
+        if code[0][-1] == 'c':
+            if code[0][0:-1] == key:
+                result[:5] = opcodes[key] + '1'
+        elif code[0] == key:
+            result[:5] = opcodes[key] + '0'
+
+    # 6~8
+    result[6:9] = bin(int(code[1]))
+
+    # 9~11
+    if code[2] != 0:
+        result[9:12] = bin(int(code[2]))
+
+    # 12~15
+    if result[4] == 0:
+        result[12:15] = bin(int(code[3])) + '0'
+    else:
+        result[12:15] = bin(int(code[3]))
+
+    print(*result)
