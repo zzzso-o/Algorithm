@@ -1,18 +1,11 @@
 # 31
 music = list(map(int, input().split()))
+a_music = sorted(music)
+d_music = list(reversed(sorted(music)))
 
-result = 0
-for i in range(8):
-    if music[i] == i+1:
-        result = 0
-    elif music[i] == 8-i:
-        result = 1
-    else:
-        result = 2
-
-if result == 0:
+if music == a_music:
     print('ascending')
-elif result == 1:
+elif music == d_music:
     print('descending')
 else:
     print('mixed')
