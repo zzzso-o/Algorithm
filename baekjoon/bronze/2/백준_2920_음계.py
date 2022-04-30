@@ -1,4 +1,3 @@
-# 31
 music = list(map(int, input().split()))
 a_music = sorted(music)
 d_music = list(reversed(sorted(music)))
