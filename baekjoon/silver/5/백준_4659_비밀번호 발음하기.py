@@ -9,3 +9,4 @@ while True:
             continue
         if i+2 < len(text):
             if text[i] == text[i+1] == text[i+2]:
+
