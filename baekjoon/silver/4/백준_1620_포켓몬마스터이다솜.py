@@ -3,9 +3,9 @@ sys.stdin = open('1620_input.txt')
 input = sys.stdin.readline
 # n, m = map(int, input().split())
 # pokemon = []
-# pkm_name = {}
+
 # for _ in range(n):
-#     pokemon.append(input().rstrip())
+#     pokemon.append(input().strip())
 # for _ in range(m):
 #     i = input()
 #     if i in pokemon:
@@ -24,7 +24,8 @@ for _ in range(N):
     pokemon_dict1[number_pokemon] = name
     pokemon_dict2[name] = number_pokemon
     number_pokemon += 1
-
+# print(pokemon_dict1)
+# print(pokemon_dict2)
 answer = []
 for _ in range(M):
     pokemon = str(sys.stdin.readline()).strip()
