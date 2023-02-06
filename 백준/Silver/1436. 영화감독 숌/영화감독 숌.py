@@ -1,10 +1,12 @@
-n = int(input())
+import sys
+
+N = int(input())
 cnt = 0
-six_n = 666
+number = 666
 while True:
-    if '666' in str(six_n):
+    if "666" in str(number):
         cnt += 1
-    if cnt == n:
-        print(six_n)
+    if cnt == N:
+        print(number)
         break
-    six_n += 1
+    number += 1
