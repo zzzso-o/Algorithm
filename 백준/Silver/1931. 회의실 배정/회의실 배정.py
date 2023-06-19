@@ -1,17 +1,20 @@
-n = int(input())
-arr = []
-for _ in range(n):
-    arr.append(list(map(int, input().split())))
+import sys
 
-arr = sorted(arr, key=lambda a: a[0]) # 시작 시간을 기준으로 정렬
-arr = sorted(arr, key=lambda a: a[1]) # 끝나는 시간을 기준으로 정렬
+N = int(sys.stdin.readline())
 
-last = 0 # 회의의 마지막 시간을 저장할 변수
-count = 0 # 회의 개수를 저장할 변수
+time = [[0]*2 for _ in range(N)]
+for i in range(N):
+    s, e = map(int, sys.stdin.readline().split())
+    time[i][0] = s
+    time[i][1] = e
 
-for i, j in arr:
-    if i >= last: # 시작 시간이 회의의 마지막 시간보다 크거나 같을때
-        count += 1
-        last = j
+time.sort(key = lambda x: (x[1], x[0]))
 
-print(count)
+cnt = 1
+end_time = time[0][1]
+for i in range(1, N):
+    if time[i][0] >= end_time:
+        cnt += 1
+        end_time = time[i][1]
+
+print(cnt)
